@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { Facebook, Twitter, Instagram } from 'lucide-react';
+import { Facebook, Linkedin, Instagram } from 'lucide-react'; // Twitter ki jagah Linkedin import kiya
 import emailjs from "@emailjs/browser"; // EmailJS import kiya
 
 const Footer = () => {
@@ -33,6 +33,13 @@ const Footer = () => {
       });
   };
 
+  // Social Links with real URLs
+  const socialLinks = [
+    { Icon: Facebook, url: "https://www.facebook.com/profile.php?id=100089565188740" },
+    { Icon: Linkedin, url: "https://www.linkedin.com/company/cologixs/" },
+    { Icon: Instagram, url: "https://www.instagram.com/cologixs/" }
+  ];
+
   return (
     <footer className="bg-[#0f172a] text-white md:h-[404px] pt-12 pb-6 px-6 md:px-12 border-t border-white/5 flex flex-col justify-between overflow-hidden">
       <div className="max-w-7xl mx-auto w-full">
@@ -49,9 +56,15 @@ const Footer = () => {
             <div className="space-y-3">
               <h4 className="font-bold text-lg">Subscribe Us</h4>
               <div className="flex gap-3">
-                {[Facebook, Twitter, Instagram].map((Icon, i) => (
-                  <a key={i} href="#" className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-[#0f172a] hover:bg-[#f27c22] hover:text-white transition-all">
-                    <Icon size={16} fill={i < 2 ? "currentColor" : "none"} />
+                {socialLinks.map((item, i) => (
+                  <a 
+                    key={i} 
+                    href={item.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer" 
+                    className="w-8 h-8 bg-white rounded-full flex items-center justify-center text-[#0f172a] hover:bg-[#f27c22] hover:text-white transition-all"
+                  >
+                    <item.Icon size={16} fill={i < 2 ? "currentColor" : "none"} />
                   </a>
                 ))}
               </div>

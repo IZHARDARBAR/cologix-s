@@ -9,6 +9,7 @@ import About from './pages/About';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Services from './pages/Services';
 import Contact from './pages/Contact';
+import CVPage from './pages/CVPage';
 
 // --- Page change hone par top par le jane wala logic ---
 const ScrollToTopOnPathChange = () => {
@@ -43,6 +44,7 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/cv/:id" element={<CVPage />} />
           </Routes>
         </main>
         <Footer />

@@ -26,12 +26,10 @@ const Contact = () => {
     setLoading(true);
 
     // --- EMAILJS SETTINGS ---
-    // Dashboard se ye teeno cheezein yahan paste karein:
     const serviceID = "YOUR_SERVICE_ID"; 
     const templateID = "YOUR_TEMPLATE_ID";
     const publicKey = "YOUR_PUBLIC_KEY";
 
-    // Template parameters (Jo aapne EmailJS dashboard template mein set kiye honge)
     const templateParams = {
       from_name: formData.firstName + " " + formData.lastName,
       from_email: formData.email,
@@ -46,7 +44,6 @@ const Contact = () => {
         console.log("SUCCESS!", response.status, response.text);
         setSubmitted(true);
         setLoading(false);
-        // Form clear karna
         setFormData({ firstName: "", lastName: "", phone: "", email: "", subject: "", message: "" });
         setTimeout(() => setSubmitted(false), 5000);
       })
@@ -59,10 +56,10 @@ const Contact = () => {
 
   return (
     <div className="animate-fadeIn font-sans overflow-x-hidden bg-white">
-      {/* 1. CONTACT HERO SECTION */}
-      <section className="relative bg-gradient-to-r from-[#213252] to-[#0b1120] md:h-[600px] flex items-center pt-32 pb-20 px-6 md:px-12 lg:px-24">
+      
+      {/* 1. CONTACT HERO SECTION - Aligned to Navbar */}
+      <section className="relative bg-gradient-to-r from-[#213252] to-[#0b1120] md:h-[600px] flex items-center pt-32 pb-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-12">
-          {/* Mobile par Text left hi rahega aur sizing exact web jaisi */}
           <div className="w-full md:w-1/2 md:h-[310px] flex flex-col justify-between items-start text-left order-2 md:order-1">
             <div className="space-y-4 mt-5">
               <span className="text-[#f27c22] font-bold uppercase tracking-[0.2em] text-[13px]">
@@ -96,8 +93,8 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* 2. CONTACT INFO SECTION */}
-      <section className="py-24 px-6 md:px-12 md:h-[268px] lg:px-24 bg-white">
+      {/* 2. CONTACT INFO SECTION - Aligned Container */}
+      <section className="py-24 px-6 md:px-12 md:h-[268px] bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center items-start">
           <div className="flex flex-col items-center space-y-4">
             <div className="text-[#1a1f2e] md:mt-[-30px]">
@@ -140,25 +137,17 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* 3. CONTACT FORM SECTION */}
-      <section className="bg-[#f3f5f7] py-24 px-6 md:px-12 lg:px-24">
+      {/* 3. CONTACT FORM SECTION - Aligned Container */}
+      <section className="bg-[#f3f5f7] py-24 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch gap-10">
           <div className="w-full md:w-5/12 md:h-[560px] h-[300px] bg-white shadow-xl rounded-sm overflow-hidden">
-            <img
-              src="/foam-img.png"
-              alt="Consulting"
-              className="w-full h-full object-cover"
-            />
+            <img src="/foam-img.png" alt="Consulting" className="w-full h-full object-cover" />
           </div>
 
           <div className="w-full md:w-7/12 md:h-[560px] h-auto bg-white p-8 md:p-10 shadow-xl rounded-sm flex flex-col justify-center">
             <div className="mb-6">
-              <span className="text-gray-400 font-semibold uppercase tracking-widest text-sm block mb-1">
-                BUSINESS CONSULTING
-              </span>
-              <h2 className="text-[#1a1f2e] text-3xl md:text-4xl font-bold">
-                Get in touch
-              </h2>
+              <span className="text-gray-400 font-semibold uppercase tracking-widest text-sm block mb-1">BUSINESS CONSULTING</span>
+              <h2 className="text-[#1a1f2e] text-3xl md:text-4xl font-bold">Get in touch</h2>
             </div>
 
             {submitted && (
@@ -170,61 +159,33 @@ const Contact = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1">
                   <label className="text-[#1a1f2e] font-bold text-xs">First Name</label>
-                  <input
-                    type="text" name="firstName" required placeholder="First name"
-                    value={formData.firstName} onChange={handleChange}
-                    className="w-full border border-gray-200 px-4 py-2.5 outline-none focus:border-[#f27c22] text-sm transition-all"
-                  />
+                  <input type="text" name="firstName" required placeholder="First name" value={formData.firstName} onChange={handleChange} className="w-full border border-gray-200 px-4 py-2.5 outline-none focus:border-[#f27c22] text-sm transition-all" />
                 </div>
                 <div className="space-y-1">
                   <label className="text-[#1a1f2e] font-bold text-xs">Last Name</label>
-                  <input
-                    type="text" name="lastName" required placeholder="Last name"
-                    value={formData.lastName} onChange={handleChange}
-                    className="w-full border border-gray-200 px-4 py-2.5 outline-none focus:border-[#f27c22] text-sm transition-all"
-                  />
+                  <input type="text" name="lastName" required placeholder="Last name" value={formData.lastName} onChange={handleChange} className="w-full border border-gray-200 px-4 py-2.5 outline-none focus:border-[#f27c22] text-sm transition-all" />
                 </div>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="space-y-1">
                   <label className="text-[#1a1f2e] font-bold text-xs">Your Phone</label>
-                  <input
-                    type="tel" name="phone" required placeholder="Your phone"
-                    value={formData.phone} onChange={handleChange}
-                    className="w-full border border-gray-200 px-4 py-2.5 outline-none focus:border-[#f27c22] text-sm transition-all"
-                  />
+                  <input type="tel" name="phone" required placeholder="Your phone" value={formData.phone} onChange={handleChange} className="w-full border border-gray-200 px-4 py-2.5 outline-none focus:border-[#f27c22] text-sm transition-all" />
                 </div>
                 <div className="space-y-1">
                   <label className="text-[#1a1f2e] font-bold text-xs">Your Email</label>
-                  <input
-                    type="email" name="email" required placeholder="Your email"
-                    value={formData.email} onChange={handleChange}
-                    className="w-full border border-gray-200 px-4 py-2.5 outline-none focus:border-[#f27c22] text-sm transition-all"
-                  />
+                  <input type="email" name="email" required placeholder="Your email" value={formData.email} onChange={handleChange} className="w-full border border-gray-200 px-4 py-2.5 outline-none focus:border-[#f27c22] text-sm transition-all" />
                 </div>
               </div>
               <div className="space-y-1">
                 <label className="text-[#1a1f2e] font-bold text-xs">Subject</label>
-                <input
-                  type="text" name="subject" placeholder="Example Text"
-                  value={formData.subject} onChange={handleChange}
-                  className="w-full border border-gray-200 px-4 py-2.5 outline-none focus:border-[#f27c22] text-sm transition-all"
-                />
+                <input type="text" name="subject" placeholder="Example Text" value={formData.subject} onChange={handleChange} className="w-full border border-gray-200 px-4 py-2.5 outline-none focus:border-[#f27c22] text-sm transition-all" />
               </div>
               <div className="space-y-1">
                 <label className="text-[#1a1f2e] font-bold text-xs">Your Message</label>
-                <textarea
-                  name="message" rows="2" placeholder="Your Message"
-                  value={formData.message} onChange={handleChange}
-                  className="w-full border border-gray-200 px-4 py-2.5 outline-none focus:border-[#f27c22] text-sm transition-all resize-none"
-                />
+                <textarea name="message" rows="2" placeholder="Your Message" value={formData.message} onChange={handleChange} className="w-full border border-gray-200 px-4 py-2.5 outline-none focus:border-[#f27c22] text-sm transition-all resize-none" />
               </div>
               <div className="pt-2">
-                <button
-                  type="submit"
-                  disabled={loading}
-                  className="bg-[#f27c22] hover:bg-[#d96a1b] text-white px-8 py-3.5 font-bold text-base rounded-sm transition-all duration-300 transform active:scale-95 shadow-lg shadow-[#f27c22]/20 w-full md:w-auto disabled:opacity-50"
-                >
+                <button type="submit" disabled={loading} className="bg-[#f27c22] hover:bg-[#d96a1b] text-white px-8 py-3.5 font-bold text-base rounded-sm transition-all duration-300 transform active:scale-95 shadow-lg shadow-[#f27c22]/20 w-full md:w-auto disabled:opacity-50">
                   {loading ? "Sending..." : "Send message"}
                 </button>
               </div>

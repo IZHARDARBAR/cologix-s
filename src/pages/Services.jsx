@@ -54,11 +54,11 @@ const Services = () => {
 
   return (
     <div className="animate-fadeIn font-sans overflow-x-hidden bg-white">
-      {/* 1. SERVICES HERO SECTION */}
-      <section className="relative bg-gradient-to-r from-[#213252] to-[#0b1120] md:h-[600px] flex items-center pt-32 pb-20 px-6 md:px-12 lg:px-24">
+      {/* 1. SERVICES HERO SECTION - Aligned to max-w-7xl */}
+      <section className="relative bg-gradient-to-r from-[#213252] to-[#0b1120] md:h-[600px] flex items-center pt-32 pb-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-12">
           {/* LEFT SIDE Content */}
-          <div className="w-full md:w-1/2 md:h-[310px] flex flex-col justify-between items-start text-left">
+          <div className="w-full md:w-1/2 md:h-[310px] flex flex-col justify-between items-start text-left order-2 md:order-1">
             <div className="space-y-4 mt-5">
               <span className=" text-[#f27c22] font-bold  uppercase tracking-[0.2em] text-[15px]">
                 SERVICES
@@ -74,7 +74,7 @@ const Services = () => {
             <div className="pt-2">
               <Link
                 to="/"
-                className="inline-block bg-[#f27c22] hover:bg-[#d96a1b] text-white px-8 py-3 font-bold text-sm rounded-sm transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg shadow-[#f27c22]/20"
+                className="inline-block bg-[#f27c22] hover:bg-[#d96a1b] text-white px-8 py-3 font-bold text-sm rounded-sm transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg shadow-[#f27c22]/10"
               >
                 Know More
               </Link>
@@ -82,7 +82,7 @@ const Services = () => {
           </div>
 
           {/* RIGHT SIDE Image */}
-          <div className="w-full mt-10 md:w-1/2 flex justify-center md:justify-end">
+          <div className="w-full mt-10 md:w-1/2 flex justify-center md:justify-end order-1 md:order-2">
             <div className="overflow-hidden shadow-2xl rounded-sm">
               <img
                 src="/services-hero.png"
@@ -94,9 +94,9 @@ const Services = () => {
         </div>
       </section>
 
-      {/* 2. SERVICES GRID SECTION */}
+      {/* 2. SERVICES GRID SECTION - Aligned to max-w-7xl */}
       <section className="bg-[#f3f5f7] py-28 px-6 md:px-12">
-        <div className="max-w-[1100px] mx-auto">
+        <div className="max-w-7xl mx-auto w-full">
           <div className="text-center mb-20">
             <span className="text-gray-400 font-bold uppercase tracking-widest text-sm">
               OUR EXPERTISE
@@ -106,7 +106,7 @@ const Services = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 justify-items-center md:justify-items-start">
             {servicesData.map((item, index) => (
               <div
                 key={index}
@@ -133,16 +133,14 @@ const Services = () => {
                     {item.desc}
                   </p>
                 </div>
-
-               
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 3. CTA SECTION */}
-      <section className="bg-gradient-to-r from-[#213252] to-[#0b1120] md:h-[250px] flex items-center py-12 px-6 md:px-12 lg:px-24">
+      {/* 3. CTA SECTION - Aligned to max-w-7xl */}
+      <section className="bg-gradient-to-r from-[#213252] to-[#0b1120] md:h-[250px] flex items-center py-12 px-6 md:px-12">
         <div className="max-w-7xl mx-auto w-full flex flex-col items-center md:items-center gap-6">
           <div className="text-center md:text-center space-y-2">
             <h3 className="text-white text-center text-3xl md:text-[44px] font-bold leading-tight tracking-tight">
@@ -160,8 +158,8 @@ const Services = () => {
         </div>
       </section>
 
-      {/* 4. SOLUTION SECTION */}
-      <section className="bg-[#f3f5f7] md:h-[620px] flex items-center py-20 px-6 md:px-12 lg:px-24">
+      {/* 4. SOLUTION SECTION - Aligned to max-w-7xl */}
+      <section className="bg-[#f3f5f7] md:h-[620px] flex items-center py-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="w-full md:w-1/2 flex justify-center md:justify-start">
             <div className="overflow-hidden shadow-2xl rounded-sm">
@@ -196,11 +194,9 @@ const Services = () => {
         </div>
       </section>
 
-      {/* 5. LOGOS SECTION */}
-       <section className="bg-white border-t border-gray-100 md:h-[146px] h-auto py-12 md:py-0 flex items-center px-6 md:px-12 lg:px-24">
-        <div className="max-w-4xl mx-auto w-full flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 lg:gap-24">
-          {/* Logo sizing kept same as web but wrap handled for mobile */}
-         
+      {/* 5. LOGOS SECTION - Aligned to max-w-7xl */}
+      <section className="bg-white border-t border-gray-100 md:h-[146px] h-auto py-12 md:py-0 flex items-center px-6 md:px-12">
+        <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 lg:gap-24">
           <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 lg:gap-24">
             <img
               src="/pseb.png"
@@ -226,20 +222,26 @@ const Services = () => {
         </div>
       </section>
 
-      {/* 6. COLLABORATIVE APPROACH SECTION (Video) */}
-      <section className="bg-[#161c2e]   py-24 px-6 md:px-12 lg:px-24">
-        <div className="max-w-5xl  mx-auto text-center space-y-10">
+      {/* 6. COLLABORATIVE APPROACH SECTION (Video) - Aligned to max-w-7xl */}
+      <section className="bg-[#161c2e] py-24 px-6 md:px-12">
+        <div className="max-w-7xl mx-auto text-center space-y-10 w-full">
           <div className="space-y-4 mt-[-30px]">
             <span className="text-[#f27c22] font-bold uppercase tracking-[0.25em] text-sm md:text-base">
               COLLABORATIVE APPROACH
             </span>
-            <h1 className="text-white text-3xl md:text-4xl  lg:text-[40px] font-bold leading-tight tracking-tight">
+            <h1 className="text-white text-3xl md:text-4xl lg:text-[40px] font-bold leading-tight tracking-tight">
               Harnessing Team Synergy for Outstanding Outcomes
             </h1>
           </div>
 
-          <div className="relative mx-auto w-full max-w-[1076px] h-[418px] aspect-video overflow-hidden shadow-2xl border border-white/5">
-            <video className="w-full h-full object-cover" playsInline autoPlay muted loop>
+          <div className="relative mx-auto w-full max-w-full h-[418px] aspect-video overflow-hidden shadow-2xl border border-white/5">
+            <video
+              className="w-full h-full object-cover"
+              playsInline
+              autoPlay
+              muted
+              loop
+            >
               <source src="/Services.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -248,29 +250,25 @@ const Services = () => {
           <p className="text-white text-start mb-[-30px] text-base md:text-lg leading-relaxed max-w-full mx-auto">
             Description: At Cologixs, teamwork is at the heart of everything we
             do. By combining our diverse skills and perspectives, we foster a
-            collaborative environment where innovative solutions thrive. Our
-            team works seamlessly together to ensure every project benefits from
-            a holistic approach, leading to superior outcomes and client
-            satisfaction. Discover how our united efforts drive success and make
-            your vision a reality.
+            collaborative environment where innovative solutions thrive.
           </p>
         </div>
       </section>
 
-      {/* 7. FINAL CTA SECTION - Background Image Added */}
-      <section 
-        className="relative py-28 px-6 md:px-12 lg:px-24 bg-cover h-[440px] bg-center bg-no-repeat overflow-hidden"
-        style={{ backgroundImage: "url('/footer-bg.png')" }} 
+      {/* 7. FINAL CTA SECTION - Aligned to max-w-7xl */}
+      <section
+        className="relative py-28 px-6 md:px-12 bg-cover h-[440px] bg-center bg-no-repeat overflow-hidden"
+        style={{ backgroundImage: "url('/footer-bg.png')" }}
       >
-        <div className="relative z-10 max-w-5xl mx-auto  mt-[-15px] text-center space-y-8">
+        <div className="relative z-10 max-w-7xl mx-auto mt-[-15px] text-center space-y-8 w-full">
           <h2 className="text-white text-3xl md:text-5xl lg:text-[50px] font-bold leading-tight tracking-tight">
             Looking for fresh and innovative ideas?
           </h2>
           <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Get ahead with creative solutions from Cologixs. We turn bold ideas into
-            actionable strategies tailored to your goals.
+            Get ahead with creative solutions from Cologixs. We turn bold ideas
+            into actionable strategies tailored to your goals.
           </p>
-          <div className="pt-">
+          <div className="pt-2">
             <Link
               to="/contact"
               className="inline-block bg-[#f27c22] hover:bg-[#d96a1b] text-white px-10 py-4 font-bold text-lg rounded-sm transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg shadow-[#f27c22]/20"

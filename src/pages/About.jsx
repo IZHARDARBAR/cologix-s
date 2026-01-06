@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; // Link import kiya
 import { Briefcase, Megaphone, Globe, Plus, Minus } from "lucide-react";
 
 const About = () => {
@@ -35,41 +35,54 @@ const About = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  // Added 'id' and 'cvImg' fields for dynamic routing
   const teamMembers = [
     {
+      id: "farhan",
       name: "Farhan Faqir",
       role: "CEO / Co-Founder",
       img: "/Farhan.png",
+      cvImg: "/Farhan-CV.png",
       color: "bg-blue-100",
     },
     {
+      id: "burhan",
       name: "Burhan Alam",
       role: "Frontend Developer",
       img: "/Burhan.png",
+      cvImg: "/Burhan-CV.png",
       color: "bg-orange-100",
     },
     {
+      id: "izhar",
       name: "Izhar",
       role: "Frontend Developer",
       img: "/Izhar.png",
+      cvImg: "/Izhar-CV.png",
       color: "bg-blue-100",
     },
     {
+      id: "alina-alam",
       name: "Alina Alam",
-      role: "CTO",
+      role: "CTO / WordPress Developer",
       img: "/AlinaAlam.png",
+      cvImg: "/AlinaAlam-CV.png",
       color: "bg-gray-100",
     },
     {
+      id: "diya",
       name: "Diya Noor",
       role: "WordPress Developer",
       img: "/Diya.png",
+      cvImg: "/Diya-CV.png",
       color: "bg-gray-100",
     },
     {
+      id: "alina-ali",
       name: "Alina Ali",
       role: "WordPress Developer",
       img: "/AlinaAli.png",
+      cvImg: "/AlinaAli-CV.png",
       color: "bg-gray-100",
     },
   ];
@@ -100,7 +113,7 @@ const About = () => {
   return (
     <div className="animate-fadeIn font-sans overflow-x-hidden bg-white">
       {/* 1. HERO SECTION */}
-      <section className="relative bg-gradient-to-r from-[#213252] to-[#0b1120] md:h-[600px] flex items-center pt-32 pb-20 px-6 md:px-12 lg:px-24">
+      <section className="relative bg-gradient-to-r from-[#213252] to-[#0b1120] md:h-[600px] flex items-center pt-32 pb-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="w-full md:w-1/2 md:h-[310px] flex flex-col justify-between items-start text-left order-2 md:order-1">
             <div className="space-y-4 mt-5">
@@ -137,131 +150,139 @@ const About = () => {
         </div>
       </section>
 
-      {/* 2. CONSULTING SECTION - Fixed height for web, auto for mobile */}
+      {/* 2. CONSULTING SECTION */}
       <section className="md:h-[472px] h-auto py-16 md:py-0 px-6 md:px-12 lg:px-24 bg-white text-center flex flex-col justify-center overflow-hidden">
-        <div className="max-w-4xl mx-auto mb-10 md:mb-20">
-          <span className="text-gray-400 font-bold uppercase tracking-widest text-lg">
-            CONSULTING
-          </span>
-          <h2 className="text-[#1a1f2e] text-2xl md:text-3xl lg:text-4xl md:whitespace-nowrap font-bold mt-4">
-            Empowering growth and innovation through technology.
-          </h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          {[
-            {
-              title: "Our Expertise",
-              icon: <Briefcase size={50} />,
-              desc: "We offer specialized knowledge and skills in delivering innovative solutions tailored to your tech needs.",
-            },
-            {
-              title: "Our Approach",
-              icon: <Megaphone size={50} />,
-              desc: "Our method combines strategic planning with hands-on execution, focusing on collaboration.",
-            },
-            {
-              title: "Where We Operate",
-              icon: <Globe size={50} />,
-              desc: "We serve clients globally, providing top-tier consulting services with a focus on delivering impactful results.",
-            },
-          ].map((item, i) => (
-            <div key={i} className="flex flex-col items-center space-y-3">
-              <div className="text-[#1a1f2e] mb-1">{item.icon}</div>
-              <h3 className="text-xl font-bold">{item.title}</h3>
-              <p className="text-gray-500 text-sm md:text-lg leading-relaxed">
-                {item.desc}
-              </p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 3. TEAM SECTION - Exact Screenshot match (2-cols on mobile) */}
-      <section className="py-24 px-6 md:px-12 lg:px-24 bg-[#ebeef5]">
-        <div className="text-center mb-16">
-          <span className="text-gray-400 font-bold uppercase tracking-widest text-xs">
-            TEAM
-          </span>
-          <h2 className="text-[#1a1f2e] text-3xl md:text-4xl font-bold mt-4">
-            Meet Our Experts
-          </h2>
-        </div>
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 max-w-7xl mx-auto">
-          {teamMembers.map((member, i) => (
-            <div
-              key={i}
-              className="bg-white group cursor-pointer overflow-hidden border border-gray-100 hover:shadow-xl transition-all"
-            >
-              <div
-                className={`md:h-[290px] h-[200px] ${member.color} flex items-end justify-center overflow-hidden`}
-              >
-                <img
-                  src={member.img}
-                  alt={member.name}
-                  className="h-full object-cover"
-                />
-              </div>
-              <div className="p-4 md:p-6 text-center">
-                <h4 className="text-sm md:text-xl font-bold text-[#1a1f2e]">
-                  {member.name}
-                </h4>
-                <p className="text-gray-400 text-[10px] md:text-sm mt-1">
-                  {member.role}
-                </p>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* 4. PROGRESS BARS SECTION */}
-      <section
-        ref={progressSectionRef}
-        className="py-24 px-6 md:px-12 lg:px-24 flex flex-col md:flex-row items-center gap-12 md:gap-16 max-w-7xl mx-auto"
-      >
-        <div className="w-full md:w-1/2 order-1 md:order-1">
-          <img
-            src="/startup.png"
-            className="w-full rounded-sm shadow-xl"
-            alt="Startup"
-          />
-        </div>
-        <div className="w-full md:w-1/2 space-y-6 order-2 md:order-2">
-          <span className="text-gray-500 font-bold uppercase tracking-widest text-lg">
-            TECH Level
-          </span>
-          <h2 className="text-[#1a1f2e] text-3xl md:text-4xl font-bold leading-tight">
-            Take your startup to new heights with smart technology solutions.
-          </h2>
-          <p className="text-gray-500 text-lg leading-relaxed">
-            Unlock new opportunities and drive sustainable growth for your small
-            startups.
-          </p>
-          <div className="space-y-6 pt-4">
+        <div className="max-w-7xl mx-auto w-full">
+          <div className="max-w-4xl mx-auto mb-10 md:mb-20">
+            <span className="text-gray-400 font-bold uppercase tracking-widest text-lg">
+              CONSULTING
+            </span>
+            <h2 className="text-[#1a1f2e] text-2xl md:text-3xl lg:text-4xl md:whitespace-nowrap font-bold mt-4">
+              Empowering growth and innovation through technology.
+            </h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full">
             {[
-              { label: "Client Satisfaction", val: "95%" },
-              { label: "Project Success Rate", val: "90%" },
-              { label: "Client Retention Ratio", val: "88%" },
-            ].map((bar, i) => (
-              <div key={i} className="space-y-2">
-                <div className="flex justify-between font-bold text-sm text-[#1a1f2e]">
-                  <span>{bar.label}</span>
-                  <span>{bar.val}</span>
-                </div>
-                <div className="w-full bg-gray-200 h-[10px] rounded-full overflow-hidden">
-                  <div
-                    className="bg-[#f27c22] h-full transition-all duration-[2500ms] ease-out"
-                    style={{ width: animate ? bar.val : "0%" }}
-                  ></div>
-                </div>
+              {
+                title: "Our Expertise",
+                icon: <Briefcase size={50} />,
+                desc: "We offer specialized knowledge and skills in delivering innovative solutions tailored to your tech needs.",
+              },
+              {
+                title: "Our Approach",
+                icon: <Megaphone size={50} />,
+                desc: "Our method combines strategic planning with hands-on execution, focusing on collaboration and adaptability.",
+              },
+              {
+                title: "Where We Operate",
+                icon: <Globe size={50} />,
+                desc: "We serve clients globally, providing top-tier consulting services with a focus on delivering impactful results.",
+              },
+            ].map((item, i) => (
+              <div key={i} className="flex flex-col items-center space-y-3">
+                <div className="text-[#1a1f2e] mb-1">{item.icon}</div>
+                <h3 className="text-xl font-bold">{item.title}</h3>
+                <p className="text-gray-500 text-sm md:text-lg leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* 3. TEAM SECTION - Aligned Container & Clickable for CV */}
+      <section className="py-24 px-6 md:px-12 bg-[#ebeef5]">
+        <div className="max-w-7xl mx-auto w-full">
+          <div className="text-center mb-16">
+            <span className="text-gray-400 font-bold uppercase tracking-widest text-xs">
+              TEAM
+            </span>
+            <h2 className="text-[#1a1f2e] text-3xl md:text-4xl font-bold mt-4">
+              Meet Our Experts
+            </h2>
+          </div>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 justify-items-center">
+            {teamMembers.map((member, i) => (
+              // Wrapped in Link to go to CV Page
+              <Link
+                to={`/cv/${member.id}`}
+                key={i}
+                className="bg-white group cursor-pointer overflow-hidden border border-gray-100 hover:shadow-xl transition-all w-full max-w-[300px]"
+              >
+                <div
+                  className={`md:h-[290px] h-[200px] ${member.color} flex items-end justify-center overflow-hidden`}
+                >
+                  <img
+                    src={member.img}
+                    alt={member.name}
+                    className="h-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                </div>
+                <div className="p-4 md:p-6 text-center">
+                  <h4 className="text-sm md:text-xl font-bold text-[#1a1f2e]">
+                    {member.name}
+                  </h4>
+                  <p className="text-gray-400 text-[10px] md:text-sm mt-1">
+                    {member.role}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. PROGRESS BARS SECTION */}
+      <section
+        ref={progressSectionRef}
+        className="py-24 px-6 md:px-12 bg-white"
+      >
+        <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center gap-12 md:gap-16">
+          <div className="w-full md:w-1/2 order-1">
+            <img
+              src="/startup.png"
+              className="w-full lg:h-110 rounded-sm shadow-xl"
+              alt="Startup"
+            />
+          </div>
+          <div className="w-full md:w-1/2 space-y-6 order-2">
+            <span className="text-gray-500 font-bold uppercase tracking-widest text-lg">
+              TECH Level
+            </span>
+            <h2 className="text-[#1a1f2e] text-3xl md:text-4xl font-bold leading-tight">
+              Take your startup to new heights with smart technology solutions.
+            </h2>
+            <p className="text-gray-500 text-lg leading-relaxed">
+              Unlock new opportunities and drive sustainable growth for your
+              small startups.
+            </p>
+            <div className="space-y-6 pt-4">
+              {[
+                { label: "Client Satisfaction", val: "95%" },
+                { label: "Project Success Rate", val: "90%" },
+                { label: "Client Retention Ratio", val: "88%" },
+              ].map((bar, i) => (
+                <div key={i} className="space-y-2">
+                  <div className="flex justify-between font-bold text-sm text-[#1a1f2e]">
+                    <span>{bar.label}</span>
+                    <span>{bar.val}</span>
+                  </div>
+                  <div className="w-full bg-gray-200 h-[10px] rounded-full overflow-hidden">
+                    <div
+                      className="bg-[#f27c22] h-full transition-all duration-[2500ms] ease-out"
+                      style={{ width: animate ? bar.val : "0%" }}
+                    ></div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 5. DARK CTA SECTION */}
-      <section className="relative bg-gradient-to-r from-[#213252] to-[#0b1120] md:h-[600px] flex items-center py-20 px-6 md:px-12 lg:px-24">
+      <section className="relative bg-gradient-to-r from-[#213252] to-[#0b1120] md:h-[600px] flex items-center py-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="w-full md:w-1/2 md:h-[310px] flex flex-col justify-between items-start text-left order-2 md:order-1">
             <div className="space-y-4">
@@ -279,7 +300,7 @@ const About = () => {
             <div className="pt-2">
               <Link
                 to="/contact"
-                className="inline-block bg-[#f27c22] hover:bg-[#d96a1b] text-white px-8 py-3 font-bold text-sm rounded-sm transition-all duration-300 transform hover:scale-105 shadow-lg shadow-[#f27c22]/10"
+                className="inline-block bg-[#f27c22] hover:bg-[#d96a1b] text-white px-8 py-3 font-bold text-sm rounded-sm transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg shadow-[#f27c22]/10"
               >
                 Get in Touch
               </Link>
@@ -288,85 +309,81 @@ const About = () => {
           <div className="w-full md:w-1/2 flex justify-center md:justify-end order-1 md:order-2">
             <div className="overflow-hidden shadow-2xl rounded-sm">
               <img
-                src="/modern-solutions.png"
+                src="/solution.jpg"
                 alt="Enterprise"
-                className="w-full md:w-[493px] h-[310px] object-cover"
+                className="w-full md:w-[493px] h-[410px] object-cover"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* 6. FAQ SECTION - Exact Screenshot match for Mobile Padding */}
-      <section className="bg-gradient-to-r from-[#45546b] to-[#18293d] py-24 px-6 md:px-12 lg:px-24 flex flex-col items-center">
-        <div className="text-center mb-12">
-          <span className="text-[#f27c22] font-bold uppercase text-lg">
-            FAQ
-          </span>
-          <h2 className="text-white text-3xl md:text-5xl font-bold mt-2 text-center">
-            Frequently asked question
-          </h2>
-        </div>
-
-        {/* Web: 1028x640 | Mobile: w-full h-auto */}
-        <div className="w-full lg:w-[1028px] lg:h-[640px] h-auto bg-white shadow-sm rounded-sm flex flex-col justify-start overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-          <div className="flex gap-4 flex-col md:mt-10 mt-4">
-            {faqs.map((faq, i) => (
-              <div key={i} className="md:px-[110px] px-6">
-                {" "}
-                {/* Padding responsive ki gayi hai */}
-                <div
-                  className={`${
-                    i !== faqs.length - 1 ? "border-b-2 border-gray-300" : ""
-                  } transition-all duration-300`}
-                >
-                  <button
-                    onClick={() => toggleFaq(i)}
-                    className="flex justify-between items-center w-full text-left py-6 md:py-8 group"
+      {/* 6. FAQ SECTION */}
+      <section className="bg-gradient-to-r from-[#45546b] to-[#18293d] py-24 px-6 md:px-12 flex flex-col items-center">
+        <div className="max-w-7xl mx-auto w-full">
+          <div className="text-center mb-12">
+            <span className="text-[#f27c22] font-bold uppercase text-lg">
+              FAQ
+            </span>
+            <h2 className="text-white text-3xl md:text-5xl font-bold mt-2 text-center">
+              Frequently asked question
+            </h2>
+          </div>
+          <div className="max-w-[1028px] mx-auto h-auto md:h-[640px] bg-white shadow-sm rounded-sm flex flex-col justify-start overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+            <div className="flex gap-4 flex-col mt-10">
+              {faqs.map((faq, i) => (
+                <div key={i} className="md:px-[110px] px-6">
+                  <div
+                    className={`${
+                      i !== faqs.length - 1 ? "border-b-2 border-gray-300" : ""
+                    } transition-all duration-300`}
                   >
-                    <span
-                      className={`font-bold text-[#1a1f2e] text-lg md:text-2xl transition-colors duration-300 ${
+                    <button
+                      onClick={() => toggleFaq(i)}
+                      className="flex justify-between items-center w-full text-left py-8 group transition-all"
+                    >
+                      <span
+                        className={`font-bold text-[#1a1f2e] text-lg md:text-2xl transition-colors duration-300 ${
+                          openIndex === i
+                            ? "text-[#f27c22]"
+                            : "group-hover:text-[#f27c22]"
+                        }`}
+                      >
+                        {faq.q}
+                      </span>
+                      <div className="flex-shrink-0 ml-4">
+                        {openIndex === i ? (
+                          <Minus size={24} className="text-[#f27c22]" />
+                        ) : (
+                          <Plus
+                            size={24}
+                            className="text-gray-300 group-hover:text-[#f27c22]"
+                          />
+                        )}
+                      </div>
+                    </button>
+                    <div
+                      className={`overflow-hidden transition-all duration-500 ease-in-out ${
                         openIndex === i
-                          ? "text-[#f27c22]"
-                          : "group-hover:text-[#f27c22]"
+                          ? "max-h-[300px] opacity-100 pb-10"
+                          : "max-h-0 opacity-0"
                       }`}
                     >
-                      {faq.q}
-                    </span>
-                    <div className="flex-shrink-0 ml-4">
-                      {openIndex === i ? (
-                        <Minus size={24} className="text-[#f27c22]" />
-                      ) : (
-                        <Plus
-                          size={24}
-                          className="text-gray-300 group-hover:text-[#f27c22]"
-                        />
-                      )}
+                      <p className="text-gray-500 text-base md:text-xl leading-relaxed">
+                        {faq.a}
+                      </p>
                     </div>
-                  </button>
-                  <div
-                    className={`overflow-hidden transition-all duration-500 ease-in-out ${
-                      openIndex === i
-                        ? "max-h-[300px] opacity-100 pb-10"
-                        : "max-h-0 opacity-0"
-                    }`}
-                  >
-                    <p className="text-gray-500 text-base md:text-xl leading-relaxed">
-                      {faq.a}
-                    </p>
                   </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </section>
 
-      {/* 7. REGISTER WITH LOGOS - Fixed Responsive height */}
-      <section className="bg-white border-t border-gray-100 md:h-[146px] h-auto py-12 md:py-0 flex items-center px-6 md:px-12 lg:px-24">
-        <div className="max-w-4xl mx-auto w-full flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 lg:gap-24">
-          {/* Logo sizing kept same as web but wrap handled for mobile */}
-         
+      {/* 7. REGISTER WITH LOGOS */}
+      <section className="bg-white border-t border-gray-100 md:h-[146px] h-auto py-12 md:py-0 flex items-center px-6 md:px-12">
+        <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 lg:gap-24">
           <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 lg:gap-24">
             <img
               src="/pseb.png"
