@@ -43,12 +43,12 @@ const Home = () => {
   const projects = [
     { title: "Create With Base", img: "/p1.png", link: "https://createwithbase.com" },
     { title: "Voyatica", img: "/p2.png", link: "https://voyatica.com" },
-    { title: "Dynamic Form", img: "/p3.png", link: "https://dynamicform.io" },
-    { title: "Venus Trials", img: "/p4.png", link: "https://venustrials.com" },
+    { title: "Dynamic Form", img: "/p3.png", link: "https://dynamicforms.ngwebsolutions.com/" },
+    { title: "Venus Trials", img: "/p4.png", link: "https://venustrails.com/" },
     { title: "Seasonal Sight", img: "/p5.png", link: "https://seasonalsights.com/" },
-    { title: "Fly.io", img: "/p6.png", link: "https://fly.io" },
-    { title: "RefundIQ", img: "/p7.png", link: "https://refundiight.com" },
-    { title: "Crypto App", img: "/p8.png", link: "https://cryptoapp.io" },
+    { title: "Fly.io", img: "/p6.png", link: "https://fly.io/" },
+    { title: "RefundIQ", img: "/p7.png", link: "https://www.refundiq.app/" },
+    { title: "Crypto App", img: "/p8.png", link: "https://cryptoapp.com" },
   ];
 
   // 5 Testimonials Data
@@ -227,7 +227,7 @@ const Home = () => {
           <img
             src="/advice.png"
             alt="Office Team"
-            className="w-full md:w-[632px] h-full md:h-[850px] object-cover"
+            className="w-full  md:w-[632px] h-full md:h-[850px] object-cover"
           />
         </div>
         <div className="w-full md:w-1/2 bg-[#0b1120] p-8 md:p-16 lg:p-24 flex items-center">
