@@ -37,7 +37,7 @@ const Services = () => {
     },
     {
       title: "Graphic Designing",
-      desc: "Graphic design combines creativity and visual communication to create compelling visuals for branding, marketing, and digital experiences.",
+      desc: "Graphic design combines creativity and visual communication to create visually compelling visuals for branding, marketing, and digital experiences.",
       icon: "/7.svg",
     },
     {
@@ -94,7 +94,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* 2. SERVICES GRID SECTION - Aligned to max-w-7xl */}
+      {/* 2. SERVICES GRID SECTION - Updated to match Home cards logic */}
       <section className="bg-[#f3f5f7] py-28 px-6 md:px-12">
         <div className="max-w-7xl mx-auto w-full">
           <div className="text-center mb-20">
@@ -106,15 +106,15 @@ const Services = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 justify-items-center md:justify-items-start">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8 justify-items-center md:justify-items-start">
             {servicesData.map((item, index) => (
               <div
                 key={index}
-                className="group relative h-[483px] w-[331px] bg-white p-11 flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-500 hover:bg-[#1a1f2e] cursor-pointer"
+                className="group relative h-[400px] w-[331px] bg-white p-11 flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-500 hover:bg-[#1a1f2e] cursor-pointer"
               >
                 <div className="w-16 h-16 flex items-center">
                   <div
-                    className="w-12 h-12 bg-[#1a1f2e] group-hover:bg-[#f27c22] transition-colors duration-500"
+                    className="w-15 h-15 bg-[#1a1f2e] group-hover:bg-[#f27c22] transition-colors duration-500"
                     style={{
                       maskImage: `url(${item.icon})`,
                       WebkitMaskImage: `url(${item.icon})`,
@@ -127,9 +127,11 @@ const Services = () => {
 
                 <div className="space-y-6">
                   <h3 className="text-[#1a1f2e] group-hover:text-white text-2xl font-bold leading-tight transition-colors duration-300">
-                    {item.title}
+                    {/* Sahi line break logic applied yahan */}
+                    {item.title.split(" ")[0]} <br />{" "}
+                    {item.title.split(" ").slice(1).join(" ")}
                   </h3>
-                  <p className="text-gray-500 mb-15 group-hover:text-gray-300 text-[15px] leading-relaxed transition-colors duration-300">
+                  <p className="text-gray-500 mb-4 group-hover:text-gray-300 text-[15px] leading-relaxed transition-colors duration-300">
                     {item.desc}
                   </p>
                 </div>

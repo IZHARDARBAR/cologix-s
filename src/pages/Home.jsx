@@ -28,8 +28,8 @@ const Home = () => {
       icon: "/uilogo.svg",
     },
     {
-      title: "Video Editing",
-      desc: "Professional video storytelling for your brand. Learn the tools and techniques to create engaging visual content for your audience.",
+      title:"Video Editing",
+      desc: "Professional video storytelling for your brand. Learn the tools and techniques to create engaging, high-quality visual content that connects with your audience.",
       icon: "/videologo.svg",
     },
     {
@@ -86,7 +86,7 @@ const Home = () => {
       role: "Managing Director /  Adventure Tour Pakistan",
       quote:
         "The team at Cologixs offered exceptional guidance for our real estate projects. Their strategic insights and industry knowledge were crucial to our success.",
-      img: "/client5.png",
+      img: "/client5.png"
     },
   ];
 
@@ -155,11 +155,11 @@ const Home = () => {
             {services.map((item, index) => (
               <div
                 key={index}
-                className="group relative h-[483px] w-[331px] bg-white p-11 flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-500 hover:bg-[#1a1f2e] cursor-pointer"
+                className="group relative h-[400px] w-[331px] bg-white p-11 flex flex-col justify-between shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-500 hover:bg-[#1a1f2e] cursor-pointer"
               >
                 <div className="w-16 h-16 flex items-center">
                   <div
-                    className="w-12 h-12 bg-[#1a1f2e] group-hover:bg-[#f27c22] transition-colors duration-500"
+                    className="w-15 h-15  bg-[#1a1f2e] group-hover:bg-[#f27c22] transition-colors duration-500"
                     style={{
                       maskImage: `url(${item.icon})`,
                       WebkitMaskImage: `url(${item.icon})`,
@@ -171,9 +171,10 @@ const Home = () => {
                 </div>
                 <div className="space-y-6">
                   <h3 className="text-[#1a1f2e] group-hover:text-white text-2xl font-bold leading-tight transition-colors duration-300">
-                    {item.title}
+                    {/* Yahan logic update ki hai pehle word ke baad break lagane ke liye */}
+                    {item.title.split(" ")[0]} <br /> {item.title.split(" ").slice(1).join(" ")}
                   </h3>
-                  <p className="text-gray-500 mb-15 group-hover:text-gray-300 text-[15px] leading-relaxed transition-colors duration-300">
+                  <p className="text-gray-500 mb-4  group-hover:text-gray-300 text-[15px] leading-relaxed transition-colors duration-300">
                     {item.desc}
                   </p>
                 </div>
