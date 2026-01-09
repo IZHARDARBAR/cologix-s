@@ -28,7 +28,7 @@ const Home = () => {
       icon: "/uilogo.svg",
     },
     {
-      title:"Video Editing",
+      title: "Video Editing",
       desc: "Professional video storytelling for your brand. Learn the tools and techniques to create engaging, high-quality visual content that connects with your audience.",
       icon: "/videologo.svg",
     },
@@ -41,11 +41,23 @@ const Home = () => {
 
   // 8 Projects Data - Added Links for each project
   const projects = [
-    { title: "Create With Base", img: "/p1.png", link: "https://createwithbase.com" },
+    {
+      title: "Create With Base",
+      img: "/p1.png",
+      link: "https://createwithbase.com",
+    },
     { title: "Voyatica", img: "/p2.png", link: "https://voyatica.com" },
-    { title: "Dynamic Form", img: "/p3.png", link: "https://dynamicforms.ngwebsolutions.com/" },
+    {
+      title: "Dynamic Form",
+      img: "/p3.png",
+      link: "https://dynamicforms.ngwebsolutions.com/",
+    },
     { title: "Venus Trials", img: "/p4.png", link: "https://venustrails.com/" },
-    { title: "Seasonal Sight", img: "/p5.png", link: "https://seasonalsights.com/" },
+    {
+      title: "Seasonal Sight",
+      img: "/p5.png",
+      link: "https://seasonalsights.com/",
+    },
     { title: "Fly.io", img: "/p6.png", link: "https://fly.io/" },
     { title: "RefundIQ", img: "/p7.png", link: "https://www.refundiq.app/" },
     { title: "Crypto App", img: "/p8.png", link: "https://cryptoapp.com" },
@@ -79,14 +91,14 @@ const Home = () => {
       role: "Director",
       quote:
         "Cologixs expertise in the Development sector helped us enhance our customer experience and streamline operations. Their recommendations have had a lasting impact on our business.",
-      img: "/client4.png"
+      img: "/client4.png",
     },
     {
       name: "Naiknam",
       role: "Managing Director /  Adventure Tour Pakistan",
       quote:
         "The team at Cologixs offered exceptional guidance for our real estate projects. Their strategic insights and industry knowledge were crucial to our success.",
-      img: "/client5.png"
+      img: "/client5.png",
     },
   ];
 
@@ -143,12 +155,12 @@ const Home = () => {
                 See how our solutions can boost your tech journey. From planning
                 to support, we provide the expertise to drive your success.
               </p>
-              <a
-                href="/services"
+              <Link
+                to="/services"
                 className="inline-block font-bold text-[#1a1f2e] border-b-2 border-[#1a1f2e] pb-1 hover:text-[#f27c22] hover:border-[#f27c22] transition-all uppercase text-sm tracking-[0.1em]"
               >
                 All services
-              </a>
+              </Link>
             </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8 justify-items-center md:justify-items-start">
@@ -172,7 +184,8 @@ const Home = () => {
                 <div className="space-y-6">
                   <h3 className="text-[#1a1f2e] group-hover:text-white text-2xl font-bold leading-tight transition-colors duration-300">
                     {/* Yahan logic update ki hai pehle word ke baad break lagane ke liye */}
-                    {item.title.split(" ")[0]} <br /> {item.title.split(" ").slice(1).join(" ")}
+                    {item.title.split(" ")[0]} <br />{" "}
+                    {item.title.split(" ").slice(1).join(" ")}
                   </h3>
                   <p className="text-gray-500 mb-4  group-hover:text-gray-300 text-[15px] leading-relaxed transition-colors duration-300">
                     {item.desc}
@@ -286,16 +299,14 @@ const Home = () => {
           </h2>
           <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 justify-items-center w-full">
             {projects.map((project, idx) => (
-              <a 
-                key={idx} 
-                href={project.link} 
-                target="_blank" 
+              <a
+                key={idx}
+                href={project.link}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="w-full"
               >
-                <div
-                  className="group relative w-full aspect-square lg:w-[250px] lg:h-[250px] overflow-hidden cursor-pointer shadow-sm"
-                >
+                <div className="group relative w-full aspect-square lg:w-[250px] lg:h-[250px] overflow-hidden cursor-pointer shadow-sm">
                   <img
                     src={project.img}
                     alt={project.title}
