@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Link } from "react-router-dom"; // Link import kiya
+import { Link } from "react-router-dom";
 import { Briefcase, Megaphone, Globe, Plus, Minus } from "lucide-react";
 
 const About = () => {
@@ -35,14 +35,13 @@ const About = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  // Added 'id' and 'cvImg' fields for dynamic routing
+  // Added 'id' fields for dynamic routing to CV pages
   const teamMembers = [
     {
       id: "farhan",
       name: "Farhan Faqir",
       role: "CEO / Co-Founder",
       img: "/Farhan.png",
-      cvImg: "/Farhan-CV.png",
       color: "bg-blue-100",
     },
     {
@@ -50,7 +49,6 @@ const About = () => {
       name: "Burhan Alam",
       role: "Frontend Developer",
       img: "/Burhan.png",
-      cvImg: "/Burhan-CV.png",
       color: "bg-orange-100",
     },
     {
@@ -58,15 +56,13 @@ const About = () => {
       name: "Izhar",
       role: "Frontend Developer",
       img: "/Izhar.png",
-      cvImg: "/Izhar-CV.png",
       color: "bg-blue-100",
     },
     {
       id: "alina-alam",
       name: "Alina Alam",
-      role: "CTO / WordPress Developer",
+      role: "CTO",
       img: "/AlinaAlam.png",
-      cvImg: "/AlinaAlam-CV.png",
       color: "bg-gray-100",
     },
     {
@@ -74,7 +70,6 @@ const About = () => {
       name: "Diya Noor",
       role: "WordPress Developer",
       img: "/Diya.png",
-      cvImg: "/Diya-CV.png",
       color: "bg-gray-100",
     },
     {
@@ -82,7 +77,6 @@ const About = () => {
       name: "Alina Ali",
       role: "WordPress Developer",
       img: "/AlinaAli.png",
-      cvImg: "/AlinaAli-CV.png",
       color: "bg-gray-100",
     },
   ];
@@ -151,7 +145,7 @@ const About = () => {
       </section>
 
       {/* 2. CONSULTING SECTION */}
-      <section className="md:h-[472px] h-auto py-16 md:py-0 px-6 md:px-12 lg:px-24 bg-white text-center flex flex-col justify-center overflow-hidden">
+      <section className="md:h-[472px] h-auto py-16 md:py-0 px-6 md:px-12 bg-white text-center flex flex-col justify-center overflow-hidden">
         <div className="max-w-7xl mx-auto w-full">
           <div className="max-w-4xl mx-auto mb-10 md:mb-20">
             <span className="text-gray-400 font-bold uppercase tracking-widest text-lg">
@@ -191,7 +185,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* 3. TEAM SECTION - Aligned Container & Clickable for CV */}
+      {/* 3. TEAM SECTION - Click Leads to Dynamic CV Page */}
       <section className="py-24 px-6 md:px-12 bg-[#ebeef5]">
         <div className="max-w-7xl mx-auto w-full">
           <div className="text-center mb-16">
@@ -204,9 +198,8 @@ const About = () => {
           </div>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8 justify-items-center">
             {teamMembers.map((member, i) => (
-              // Wrapped in Link to go to CV Page
               <Link
-                to={`/cv/${member.id}`}
+                to={`/cv/${member.id}`} 
                 key={i}
                 className="bg-white group cursor-pointer overflow-hidden border border-gray-100 hover:shadow-xl transition-all w-full max-w-[300px]"
               >
@@ -242,7 +235,7 @@ const About = () => {
           <div className="w-full md:w-1/2 order-1">
             <img
               src="/startup.png"
-              className="w-full lg:h-110 rounded-sm shadow-xl"
+              className="w-full rounded-sm shadow-xl"
               alt="Startup"
             />
           </div>
@@ -309,9 +302,9 @@ const About = () => {
           <div className="w-full md:w-1/2 flex justify-center md:justify-end order-1 md:order-2">
             <div className="overflow-hidden shadow-2xl rounded-sm">
               <img
-                src="/solution.jpg"
+                src="/modern-solutions.png"
                 alt="Enterprise"
-                className="w-full md:w-[493px] h-[410px] object-cover"
+                className="w-full md:w-[493px] h-[310px] object-cover"
               />
             </div>
           </div>
@@ -319,7 +312,7 @@ const About = () => {
       </section>
 
       {/* 6. FAQ SECTION */}
-      <section className="bg-gradient-to-r from-[#45546b] to-[#18293d] py-24 px-6 md:px-12 flex flex-col items-center">
+      <section className="bg-gradient-to-r from-[#45546b] to-[#18293d] py-24 px-6 md:px-12 flex flex-col  items-center">
         <div className="max-w-7xl mx-auto w-full">
           <div className="text-center mb-12">
             <span className="text-[#f27c22] font-bold uppercase text-lg">
@@ -329,7 +322,7 @@ const About = () => {
               Frequently asked question
             </h2>
           </div>
-          <div className="max-w-[1028px] mx-auto h-auto md:h-[640px] bg-white shadow-sm rounded-sm flex flex-col justify-start overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+          <div className="w-full lg:w-[1028px] lg:h-[640px] h-auto lg:ml-18 bg-white shadow-sm rounded-sm  flex-col justify-center overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <div className="flex gap-4 flex-col mt-10">
               {faqs.map((faq, i) => (
                 <div key={i} className="md:px-[110px] px-6">
