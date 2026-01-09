@@ -96,10 +96,10 @@ const Home = () => {
       <section className="bg-[#0b1120] min-h-screen flex items-center pt-32 pb-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 w-full">
           <div className="w-full md:w-1/2 order-1 md:order-2 relative flex justify-center">
-            <div className="absolute -inset-10 bg-blue-500/10 blur-[100px] rounded-full"></div>
+            <div className="absolute -inset-10 bg-blue-500/10 blur-[100px]  rounded-full"></div>
             <img
               src="/hero-illustration.png"
-              className="relative z-10 w-full max-w-2xl mx-auto drop-shadow-2xl object-contain"
+              className="relative z-10    max-w-2xl mx-auto drop-shadow-2xl object-contain"
               alt="Cologixs Hero"
             />
           </div>
@@ -118,7 +118,7 @@ const Home = () => {
               Let’s build your digital future together.
             </p>
             <div className="pt-4">
-              <button className="bg-[#f27c22] mb-10 hover:bg-[#d96a1b] text-white px-10 py-4 font-bold text-lg rounded-sm transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg shadow-[#f27c22]/20">
+              <button className="bg-[#f27c22] mb-20 hover:bg-[#d96a1b] text-white px-10 py-4 font-bold text-lg rounded-sm transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg shadow-[#f27c22]/20">
                 Know More
               </button>
             </div>
