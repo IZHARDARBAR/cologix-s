@@ -94,7 +94,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* 2. SERVICES GRID SECTION - Updated to match Home cards logic */}
+      {/* 2. SERVICES GRID SECTION -  */}
       <section className="bg-[#f3f5f7] py-28 px-6 md:px-12">
         <div className="max-w-7xl mx-auto w-full">
           <div className="text-center mb-20">
