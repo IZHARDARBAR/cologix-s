@@ -54,34 +54,34 @@ const CVPage = () => {
         { title: "Cologixs Enterprise Portal", link: "https://cologixs.com" },
       ],
     },
-    burhan: {
-      name: "Burhan Alam",
-      role: "Frontend Developer",
-      email: "burhan@cologixs.com",
-      phone: "+92 341 5688937",
-      location: "Gilgit, Pakistan",
-      profilePic: "/Burhan.png",
-      customStyle: { objectPosition: "center 0%", transform: "scale(1.1)" },
-      summary:
-        "Dedicated Frontend Developer focused on building high-performance, pixel-perfect web applications.",
-      skills: ["HTML", "CSS", "JavaScript"],
-      experience: [
-        {
-          year: "2022 - Present",
-          title: "Frontend Dev",
-          company: "Cologixs",
-          desc: "Crafting modern user interfaces with React.",
-        },
-      ],
-      education: [
-        {
-          year: "2016 - 2020",
-          degree: "BS Information Technology",
-          school: "Virtual University",
-        },
-      ],
-      projects: [{ title: "E-Commerce Dashboard", link: "#" }],
-    },
+    // burhan: {
+    //   name: "Burhan Alam",
+    //   role: "Frontend Developer",
+    //   email: "burhan@cologixs.com",
+    //   phone: "+92 341 5688937",
+    //   location: "Gilgit, Pakistan",
+    //   profilePic: "/Burhan.png",
+    //   customStyle: { objectPosition: "center 0%", transform: "scale(1.1)" },
+    //   summary:
+    //     "Dedicated Frontend Developer focused on building high-performance, pixel-perfect web applications.",
+    //   skills: ["HTML", "CSS", "JavaScript"],
+    //   experience: [
+    //     {
+    //       year: "2022 - Present",
+    //       title: "Frontend Dev",
+    //       company: "Cologixs",
+    //       desc: "Crafting modern user interfaces with React.",
+    //     },
+    //   ],
+    //   education: [
+    //     {
+    //       year: "2016 - 2020",
+    //       degree: "BS Information Technology",
+    //       school: "Virtual University",
+    //     },
+    //   ],
+    //   projects: [{ title: "E-Commerce Dashboard", link: "#" }],
+    // },
     izhar: {
       name: "Izhar",
       role: "Frontend Developer",
@@ -211,35 +211,35 @@ const CVPage = () => {
         { title: "Blvksir", link: "https://blvksir.com/" },
       ],
     },
-    "alina-ali": {
-      name: "Alina Ali",
-      role: "WordPress Developer",
-      email: "alina.ali@cologixs.com",
-      phone: "+92 341 5688937",
-      location: "Gilgit, Pakistan",
-      profilePic: "/AlinaAli.png",
-      customStyle: { objectPosition: "center 0%" },
-      summary:
-        "Passionate about web development and creating user-friendly WordPress solutions.",
-      skills: [
-        "CMS Management",
-        "SEO Optimization",
-        "Responsive Design",
-        "Plugin Customization",
-      ],
-      experience: [
-        {
-          year: "2023 - Present",
-          title: "WordPress Dev",
-          company: "Cologixs",
-          desc: "Managing content and theme customization.",
-        },
-      ],
-      education: [
-        { year: "2019 - 2023", degree: "Bachelor Degree", school: "KIU" },
-      ],
-      projects: [{ title: "NGO Website Redesign", link: "#" }],
-    },
+    // "alina-ali": {
+    //   name: "Alina Ali",
+    //   role: "WordPress Developer",
+    //   email: "alina.ali@cologixs.com",
+    //   phone: "+92 341 5688937",
+    //   location: "Gilgit, Pakistan",
+    //   profilePic: "/AlinaAli.png",
+    //   customStyle: { objectPosition: "center 0%" },
+    //   summary:
+    //     "Passionate about web development and creating user-friendly WordPress solutions.",
+    //   skills: [
+    //     "CMS Management",
+    //     "SEO Optimization",
+    //     "Responsive Design",
+    //     "Plugin Customization",
+    //   ],
+    //   experience: [
+    //     {
+    //       year: "2023 - Present",
+    //       title: "WordPress Dev",
+    //       company: "Cologixs",
+    //       desc: "Managing content and theme customization.",
+    //     },
+    //   ],
+    //   education: [
+    //     { year: "2019 - 2023", degree: "Bachelor Degree", school: "KIU" },
+    //   ],
+    //   projects: [{ title: "NGO Website Redesign", link: "#" }],
+    // },
   };
 
   const member = teamData[id];
