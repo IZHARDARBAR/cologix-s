@@ -54,7 +54,7 @@ const Services = () => {
 
   return (
     <div className="animate-fadeIn font-sans overflow-x-hidden bg-white">
-      {/* 1. SERVICES HERO SECTION - Aligned to max-w-7xl */}
+      {/* 1. SERVICES HERO SECTION  */}
       <section className="relative bg-gradient-to-r from-[#213252] to-[#0b1120] md:h-[600px] flex items-center pt-32 pb-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-12">
           {/* LEFT SIDE Content */}
@@ -127,7 +127,6 @@ const Services = () => {
 
                 <div className="space-y-6">
                   <h3 className="text-[#1a1f2e] group-hover:text-white text-2xl font-bold leading-tight transition-colors duration-300">
-                    {/* Sahi line break logic applied yahan */}
                     {item.title.split(" ")[0]} <br />{" "}
                     {item.title.split(" ").slice(1).join(" ")}
                   </h3>
@@ -141,7 +140,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* 3. CTA SECTION - Aligned to max-w-7xl */}
+      {/* 3. CTA SECTION */}
       <section className="bg-gradient-to-r from-[#213252] to-[#0b1120] md:h-[250px] flex items-center py-12 px-6 md:px-12">
         <div className="max-w-7xl mx-auto w-full flex flex-col items-center md:items-center gap-6">
           <div className="text-center md:text-center space-y-2">
@@ -160,7 +159,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* 4. SOLUTION SECTION - Aligned to max-w-7xl */}
+      {/* 4. SOLUTION SECTION */}
       <section className="bg-[#f3f5f7] md:h-[620px] flex items-center py-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="w-full md:w-1/2 flex justify-center md:justify-start">
@@ -196,7 +195,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* 5. LOGOS SECTION - Aligned to max-w-7xl */}
+      {/* 5. LOGOS SECTION  */}
       <section className="bg-white border-t border-gray-100 md:h-[146px] h-auto py-12 md:py-0 flex items-center px-6 md:px-12">
         <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 lg:gap-24">
           <div className="flex flex-wrap justify-center items-center gap-10 md:gap-16 lg:gap-24">
@@ -224,7 +223,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* 6. COLLABORATIVE APPROACH SECTION (Video) - Aligned to max-w-7xl */}
+      {/* 6. COLLABORATIVE APPROACH SECTION (Video) - */}
       <section className="bg-[#161c2e] py-24 px-6 md:px-12">
         <div className="max-w-7xl mx-auto text-center space-y-10 w-full">
           <div className="space-y-4 mt-[-30px]">
@@ -257,7 +256,7 @@ const Services = () => {
         </div>
       </section>
 
-      {/* 7. FINAL CTA SECTION - Aligned to max-w-7xl */}
+      {/* 7. FINAL CTA SECTION */}
       <section
         className="relative py-28 px-6 md:px-12 bg-cover h-[440px] bg-center bg-no-repeat overflow-hidden"
         style={{ backgroundImage: "url('/footer-bg.png')" }}

@@ -17,7 +17,6 @@ const Navbar = () => {
     <nav className="bg-[#0b1120] text-white py-4 px-6 md:px-12 fixed w-full top-0 z-[100] border-b border-white/5">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         
-        {/* Logo: Image from public folder */}
         <Link to="/" className="flex items-center">
           <img 
             src="/navlogo.png" 
@@ -45,7 +44,7 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Action Button: Hover Orange & Link to Contact */}
+        {/* Action Button */}
         <div className="hidden md:block">
           <Link 
             to="/contact" 

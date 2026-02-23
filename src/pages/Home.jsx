@@ -104,7 +104,7 @@ const Home = () => {
 
   return (
     <div className="animate-fadeIn font-sans overflow-x-hidden">
-      {/* 1. HERO SECTION - Aligned with Navbar */}
+      {/* 1. HERO SECTION */}
       <section className="bg-[#0b1120] min-h-screen flex items-center pt-32 pb-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12 w-full">
           <div className="w-full md:w-1/2 order-1 md:order-2 relative flex justify-center">
@@ -138,7 +138,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 2. SERVICES SECTION - Width adjusted to max-w-7xl for Navbar alignment */}
+      {/* 2. SERVICES SECTION  */}
       <section className="bg-[#f3f5f7] py-28 px-6 md:px-12">
         <div className="max-w-7xl mx-auto w-full">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
@@ -197,7 +197,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 3. STATS SECTION - Standardized Padding */}
+      {/* 3. STATS SECTION */}
       <section className="bg-white py-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-12 text-center w-full">
           <div>
@@ -235,7 +235,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 4. ADVICE SECTION - Wrapped content for Navbar alignment */}
+      {/* 4. ADVICE SECTION */}
       <section className="flex  flex-col md:flex-row min-h-[690px]">
         <div className="w-full md:w-1/2 flex justify-center md:justify-end bg-gradient-to-r from-[#213252] to-[#02194e]">
           <img
@@ -288,7 +288,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 5. PROJECTS SECTION - Standardized max-w with Links */}
+      {/* 5. PROJECTS SECTION */}
       <section className="bg-white py-24 px-6 md:px-12">
         <div className="max-w-7xl mx-auto w-full">
           <span className="text-gray-400 font-bold uppercase tracking-[0.25em] text-sm">
@@ -325,7 +325,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 6. TECHNOLOGY SOLUTIONS SECTION - Aligned Container */}
+      {/* 6. TECHNOLOGY SOLUTIONS SECTION -*/}
       <section className="bg-gradient-to-r from-[#213252] to-[#0f172a] py-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-12 min-h-[500px]">
           <div className="w-full md:w-2/5 order-1 md:order-2 flex justify-center md:justify-end">
@@ -361,7 +361,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* 7. TESTIMONIAL SLIDER SECTION - Aligned to max-w-7xl */}
+      {/* 7. TESTIMONIAL SLIDER SECTION - */}
       <section className="bg-[#f3f4f6] py-24 px-6 md:px-12">
         <div className="max-w-7xl mx-auto w-full flex flex-col items-center">
           <div className="w-full lg:w-full bg-white shadow-xl flex flex-col md:flex-row items-center overflow-hidden transition-all duration-500 rounded-sm">

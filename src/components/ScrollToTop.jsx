@@ -4,7 +4,6 @@ import { ChevronUp } from 'lucide-react'; // Lucide icon use kiya
 const ScrollToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
 
-  // Scroll position check karne ke liye logic
   useEffect(() => {
     const toggleVisibility = () => {
       if (window.pageYOffset > 300) {

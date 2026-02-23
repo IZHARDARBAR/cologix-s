@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { init } from '@emailjs/browser';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import ScrollToTopBtn from './components/ScrollToTop'; // Naya button import
+import ScrollToTopBtn from './components/ScrollToTop'; 
 import Home from './pages/Home';
 import About from './pages/About';
 import PrivacyPolicy from './pages/PrivacyPolicy';
@@ -11,7 +11,7 @@ import Services from './pages/Services';
 import Contact from './pages/Contact';
 import CVPage from './pages/CVPage';
 
-// --- Page change hone par top par le jane wala logic ---
+
 const ScrollToTopOnPathChange = () => {
   const { pathname } = useLocation();
   useEffect(() => {
@@ -29,10 +29,7 @@ function App() {
 
   return (
     <Router>
-      {/* 1. Har page change par top par le jayega */}
       <ScrollToTopOnPathChange />
-      
-      {/* 2. Floating Scroll Button (Tab dikhega jab scroll karenge) */}
       <ScrollToTopBtn />
       
       <div className="flex flex-col min-h-screen overflow-x-hidden">

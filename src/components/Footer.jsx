@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import { Facebook, Linkedin, Instagram } from 'lucide-react'; // Twitter ki jagah Linkedin import kiya
-import emailjs from "@emailjs/browser"; // EmailJS import kiya
+import { Facebook, Linkedin, Instagram } from 'lucide-react'; 
+import emailjs from "@emailjs/browser"; 
 
 const Footer = () => {
   const [isSubscribed, setIsSubscribed] = useState(false);
-  const [email, setEmail] = useState(""); // Email state add ki
+  const [email, setEmail] = useState("");
 
   const handleSubscribe = (e) => {
     e.preventDefault();
@@ -25,7 +25,7 @@ const Footer = () => {
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
         setIsSubscribed(true);
-        setEmail(""); // Input clear karna
+        setEmail(""); 
       })
       .catch((err) => {
         alert("Failed to subscribe. Please check your EmailJS keys.");
@@ -86,7 +86,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Newsletter & Contact Info - NOW WORKING */}
           <div className="md:col-span-6 space-y-8">
             <div>
               <h4 className="font-bold text-lg mb-4">Subscribe for our newsletter</h4>
@@ -97,7 +96,7 @@ const Footer = () => {
                     type="email" 
                     required 
                     value={email}
-                    onChange={(e) => setEmail(e.target.value)} // Value update logic
+                    onChange={(e) => setEmail(e.target.value)} 
                     placeholder="Your email" 
                     className="flex-1 bg-white px-4 py-2 text-gray-900 outline-none rounded-l-sm text-sm placeholder:text-[11px]"
                   />

@@ -44,13 +44,13 @@ const About = () => {
       img: "/Farhan.png",
       color: "bg-blue-100",
     },
-    {
-      id: "burhan",
-      name: "Burhan Alam",
-      role: "Frontend Developer",
-      img: "/Burhan.png",
-      color: "bg-orange-100",
-    },
+    // {
+    //   id: "burhan",
+    //   name: "Burhan Alam",
+    //   role: "Frontend Developer",
+    //   img: "/Burhan.png",
+    //   color: "bg-orange-100",
+    // },
     {
       id: "izhar",
       name: "Izhar",
@@ -72,13 +72,13 @@ const About = () => {
       img: "/Diya.png",
       color: "bg-gray-100",
     },
-    {
-      id: "alina-ali",
-      name: "Alina Ali",
-      role: "WordPress Developer",
-      img: "/AlinaAli.png",
-      color: "bg-gray-100",
-    },
+    // {
+    //   id: "alina-ali",
+    //   name: "Alina Ali",
+    //   role: "WordPress Developer",
+    //   img: "/AlinaAli.png",
+    //   color: "bg-gray-100",
+    // },
   ];
 
   const faqs = [
@@ -185,7 +185,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* 3. TEAM SECTION - Click Leads to Dynamic CV Page */}
+      {/* 3. TEAM SECTION - */}
       <section className="py-24 px-6 md:px-12 bg-[#ebeef5]">
         <div className="max-w-7xl mx-auto w-full">
           <div className="text-center mb-16">

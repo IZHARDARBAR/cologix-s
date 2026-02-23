@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { MapPin, Mail, Phone, Clock } from "lucide-react";
-import emailjs from "@emailjs/browser"; // EmailJS import kiya
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   // Form State logic
@@ -15,7 +15,7 @@ const Contact = () => {
   });
 
   const [submitted, setSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false); // Loading state add ki
+  const [loading, setLoading] = useState(false); 
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -57,7 +57,7 @@ const Contact = () => {
   return (
     <div className="animate-fadeIn font-sans overflow-x-hidden bg-white">
       
-      {/* 1. CONTACT HERO SECTION - Aligned to Navbar */}
+      {/* 1. CONTACT HERO SECTION - */}
       <section className="relative bg-gradient-to-r from-[#213252] to-[#0b1120] md:h-[600px] flex items-center pt-32 pb-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto w-full flex flex-col md:flex-row items-center justify-between gap-12">
           <div className="w-full md:w-1/2 md:h-[310px] flex flex-col justify-between items-start text-left order-2 md:order-1">
@@ -93,7 +93,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* 2. CONTACT INFO SECTION - Aligned Container */}
+      {/* 2. CONTACT INFO SECTION - */}
       <section className="py-24 px-6 md:px-12 md:h-[268px] bg-white">
         <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 text-center items-start">
           <div className="flex flex-col items-center space-y-4">
@@ -137,7 +137,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* 3. CONTACT FORM SECTION - Aligned Container */}
+      {/* 3. CONTACT FORM SECTION -*/}
       <section className="bg-[#f3f5f7] py-24 px-6 md:px-12">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-stretch gap-10">
           <div className="w-full md:w-5/12 md:h-[560px] h-[300px] bg-white shadow-xl rounded-sm overflow-hidden">
